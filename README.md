@@ -15,7 +15,7 @@ Before running the program, make sure you have:
 1. Clone the repository:
 
 ```sh
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+git clone https://github.com/rafaelsiq94/go-cli-translator.git
 ```
 
 2. Install dependencies:
