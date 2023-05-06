@@ -24,10 +24,14 @@ func main() {
   endpoint := "https://api.cognitive.microsofttranslator.com/"
   uri := endpoint + "/translate?api-version=3.0"
 
+  from := os.Args[1]
+  to := os.Args[2]
+  text := os.Args[3]
+
   u, _ := url.Parse(uri)
   q := u.Query()
-  q.Add("from", "pt-br")
-  q.Add("to", "en")
+  q.Add("from", from)
+  q.Add("to", to)
   u.RawQuery = q.Encode()
 
   if len(os.Args) < 2 {
@@ -38,7 +42,7 @@ func main() {
   body := []struct {
     Text string
   }{
-    {Text: os.Args[1]},
+    {Text: text},
   }
   b, _ := json.Marshal(body)
 

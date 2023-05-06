@@ -1,6 +1,6 @@
 # Translate Text using Azure Cognitive Services API
 
-This is a simple Go program that translates a given text from brazilian portuguese to english using the Azure Cognitive Services API.
+This is a simple Go program that translates a given text from one language to another using the Azure Cognitive Services API.
 
 ## Prerequisites
 
@@ -33,10 +33,10 @@ echo "KEY=your_key_here" >> .env
 echo "LOCATION=your_location_here" >> .env
 ```
 
-2. Run the program with a text to be translated:
+2. Run the program with the origin language and target language, followed by the text to be translated:
 
 ```sh
-go run main.go "Seja bem-vindo!"
+go run main.go pt-br en "Seja bem-vindo!"
 ```
 
 3. The translated text will be displayed in the terminal.
